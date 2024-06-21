@@ -1,6 +1,6 @@
 # tempo
 
-![Version: 1.10.0](https://img.shields.io/badge/Version-1.10.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.5.0](https://img.shields.io/badge/AppVersion-2.5.0-informational?style=flat-square)
+![Version: 1.10.1](https://img.shields.io/badge/Version-1.10.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.5.0](https://img.shields.io/badge/AppVersion-2.5.0-informational?style=flat-square)
 
 Grafana Tempo Single Binary Mode
 
@@ -149,3 +149,4 @@ and [1.5 -> 2.0 upgrade guide](https://grafana.com/docs/tempo/latest/setup/upgra
 Upgrading from pre 0.7.0 will, by default, move your trace storage from `/tmp/tempo/traces` to `/var/tempo/traces`.
 This will cause Tempo to lose trace history. If you would like to retain history just copy the contents from the
 old folder to the new.
+
