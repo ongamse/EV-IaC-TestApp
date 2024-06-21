@@ -76,7 +76,10 @@ Grafana Tempo Single Binary Mode
 | tempo.repository | string | `"grafana/tempo"` |  |
 | tempo.resources | object | `{}` |  |
 | tempo.retention | string | `"24h"` |  |
-| tempo.securityContext | object | `{}` |  |
+| tempo.securityContext.fsGroup | int | `10001` |  |
+| tempo.securityContext.runAsGroup | int | `10001` |  |
+| tempo.securityContext.runAsNonRoot | bool | `true` |  |
+| tempo.securityContext.runAsUser | int | `10001` |  |
 | tempo.server.http_listen_port | int | `3100` | HTTP server listen port |
 | tempo.storage.trace.backend | string | `"local"` |  |
 | tempo.storage.trace.local.path | string | `"/var/tempo/traces"` |  |
@@ -149,4 +152,3 @@ and [1.5 -> 2.0 upgrade guide](https://grafana.com/docs/tempo/latest/setup/upgra
 Upgrading from pre 0.7.0 will, by default, move your trace storage from `/tmp/tempo/traces` to `/var/tempo/traces`.
 This will cause Tempo to lose trace history. If you would like to retain history just copy the contents from the
 old folder to the new.
-
