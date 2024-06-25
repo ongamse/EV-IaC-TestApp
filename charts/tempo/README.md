@@ -36,7 +36,7 @@ Grafana Tempo Single Binary Mode
 | podLabels | object | `{}` | Pod (extra) Labels |
 | priorityClassName | string | `nil` | The name of the PriorityClass |
 | replicas | int | `1` | Define the amount of instances |
-| securityContext | object | `{}` | securityContext for container |
+| securityContext | object | `{"fsGroup":10001,"runAsGroup":10001,"runAsNonRoot":true,"runAsUser":10001}` | securityContext for container |
 | service.annotations | object | `{}` |  |
 | service.labels | object | `{}` |  |
 | service.targetPort | string | `""` |  |
@@ -76,10 +76,7 @@ Grafana Tempo Single Binary Mode
 | tempo.repository | string | `"grafana/tempo"` |  |
 | tempo.resources | object | `{}` |  |
 | tempo.retention | string | `"24h"` |  |
-| tempo.securityContext.fsGroup | int | `10001` |  |
-| tempo.securityContext.runAsGroup | int | `10001` |  |
-| tempo.securityContext.runAsNonRoot | bool | `true` |  |
-| tempo.securityContext.runAsUser | int | `10001` |  |
+| tempo.securityContext | string | `nil` |  |
 | tempo.server.http_listen_port | int | `3100` | HTTP server listen port |
 | tempo.storage.trace.backend | string | `"local"` |  |
 | tempo.storage.trace.local.path | string | `"/var/tempo/traces"` |  |

@@ -101,10 +101,6 @@ tempo:
         http:
           endpoint: "0.0.0.0:4318"
   securityContext:
-    fsGroup: 10001
-    runAsNonRoot: true
-    runAsUser: 10001
-    runAsGroup: 10001
     # allowPrivilegeEscalation: false
     #  capabilities:
     #    drop:
@@ -239,11 +235,11 @@ tempoQuery:
     # readOnlyRootFilesystem: false # fails if true, do not enable
 
 # -- securityContext for container
-securityContext: {}
-  # runAsUser: 65532
-  # runAsGroup: 65532
-  # fsGroup: 65532
-  # runAsNonRoot: true
+securityContext:
+  fsGroup: 10001
+  runAsNonRoot: true
+  runAsUser: 10001
+  runAsGroup: 10001
 
 serviceAccount:
   # -- Specifies whether a ServiceAccount should be created
