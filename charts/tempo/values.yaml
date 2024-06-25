@@ -236,10 +236,10 @@ tempoQuery:
 
 # -- securityContext for container
 securityContext:
-  fsGroup: 10001
-  runAsNonRoot: true
   runAsUser: 10001
   runAsGroup: 10001
+  fsGroup: 10001
+  runAsNonRoot: true
 
 serviceAccount:
   # -- Specifies whether a ServiceAccount should be created
